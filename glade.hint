@@ -1,0 +1,5 @@
+category: Dotnet Gnome
+requires: cygwin mono libglade2 gtk-sharp2
+external-source: gtk-sharp2
+sdesc: "Mono libglade bindings"
+ldesc: "Mono C-Sharp GNOME library bindings"

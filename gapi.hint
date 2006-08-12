@@ -1,0 +1,5 @@
+category: Dotnet Gnome Devel
+requires: cygwin mono perl perl-XML-LibXML
+external-source: gtk-sharp2
+sdesc: "Mono bindings code generator v2"
+ldesc: "Mono C-Sharp GNOME library bindings"
