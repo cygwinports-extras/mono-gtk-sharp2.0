@@ -3,55 +3,55 @@ gtk-sharp2
 Mono CSharp bindings for the GNOME libraries.
 
 Runtime requirements:
-  cygwin-1.5.21-1
-  atk-1.10.3-1
-  gdk-pixbuf2-2.8.20-1
-  gtk2-x11-2.8.20-1
+  cygwin-1.5.22-1
+  atk-1.12.3-1
+  gdk-pixbuf2-2.10.6-1
+  gtk2-x11-2.10.6-1
   libxml2-2.6.26-1
-  mono-1.1.16.1-1
-  pango-1.12.3-1
+  mono-1.2.2.1-1
+  pango-1.14.8-1
 (art)
   libart_lgpl2-2.3.17-1
 (gconf)
-  GConf2-2.14.0-2
+  GConf2-2.16.0-1
 (glib)
-  glib2-2.10.3-1
+  glib2-2.12.4-1
 (glade)
   libglade2-2.6.0-1
 (gnome)
-  libgnome2-2.14.1-1
+  libgnome2-2.16.0-1
   libgnomecanvas2-2.14.0-1
   libgnomeprint22-2.12.1-2
   libgnomeprintui22-2.12.1-2
-  libgnomeui2-2.14.1-1
+  libgnomeui2-2.16.1-1
 (gnome-vfs)
-  gnome-vfs2-2.14.2-1
+  gnome-vfs2-2.16.2-1
 (gtkhtml)
-  gtkhtml38-3.10.2-1
+  gtkhtml38-3.12.1-1
 (rsvg)
-  librsvg2-2.14.4-1
+  librsvg2-2.16.1-1
 (vte)
-  vte-0.12.2-1
+  vte-0.14.1-1
 (gapi2)
   perl-5.8.7-5
-  perl-XML-LibXML-1.58-1 
+  perl-XML-LibXML-1.61003-1 
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.21-1
-  autoconf2.5-2.59-2
+  cygwin-1.5.22-1
+  autoconf2.5-2.60-2
   automake1.9-1.9.6-1
-  binutils-20060709-1
-  cygport-0.2.5-1
+  binutils-20060817-1
+  cygport-0.2.7-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
-  libtool1.5-1.5.22-1
+  libtool1.5-1.5.23a-1
   make-3.81-1
-  monodoc-1.1.16-1
+  monodoc-1.2.1-1
   perl-5.8.7-5
-  perl-XML-LibXML-1.58-1 
-  pkg-config-0.20-1
-  sed-4.1.5-1
+  perl-XML-LibXML-1.61003-1 
+  pkg-config-0.21-1
+  sed-4.1.5-2
 
 Canonical website:
   http://www.mono-project.com/
@@ -89,6 +89,9 @@ Files included in the binary packages:
   /usr/bin/cyggdksharpglue-2.dll
   /usr/bin/cyggtksharpglue-2.dll
   /usr/bin/cygpangosharpglue-2.dll
+  /usr/lib/libgdksharpglue-2.la
+  /usr/lib/libgtksharpglue-2.la
+  /usr/lib/libpangosharpglue-2.la
   /usr/lib/mono/gac/atk-sharp/2.8.0.0__35e10195dab3c99f/atk-sharp.dll
   /usr/lib/mono/gac/atk-sharp/2.8.0.0__35e10195dab3c99f/atk-sharp.dll.config
   /usr/lib/mono/gac/gdk-sharp/2.8.0.0__35e10195dab3c99f/gdk-sharp.dll
@@ -182,6 +185,7 @@ Files included in the binary packages:
   /usr/lib/pkgconfig/gconf-sharp-2.0.pc
 (glade)
   /usr/bin/cyggladesharpglue-2.dll
+  /usr/lib/libgladesharpglue-2.la
   /usr/lib/mono/gac/glade-sharp/2.8.0.0__35e10195dab3c99f/glade-sharp.dll
   /usr/lib/mono/gac/glade-sharp/2.8.0.0__35e10195dab3c99f/glade-sharp.dll.config
   /usr/lib/mono/gac/policy.2.4.glade-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.config
@@ -194,6 +198,7 @@ Files included in the binary packages:
   /usr/lib/pkgconfig/glade-sharp-2.0.pc
 (glib)
   /usr/bin/cygglibsharpglue-2.dll
+  /usr/lib/libglibsharpglue-2.la
   /usr/lib/mono/gac/glib-sharp/2.8.0.0__35e10195dab3c99f/glib-sharp.dll
   /usr/lib/mono/gac/glib-sharp/2.8.0.0__35e10195dab3c99f/glib-sharp.dll.config
   /usr/lib/mono/gac/policy.2.4.glib-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.config
@@ -206,6 +211,7 @@ Files included in the binary packages:
   /usr/lib/pkgconfig/glib-sharp-2.0.pc
 (gnome)
   /usr/bin/cyggnomesharpglue-2.dll
+  /usr/lib/libgnomesharpglue-2.la
   /usr/lib/mono/gac/gnome-sharp/2.8.0.0__35e10195dab3c99f/gnome-sharp.dll
   /usr/lib/mono/gac/gnome-sharp/2.8.0.0__35e10195dab3c99f/gnome-sharp.dll.config
   /usr/lib/mono/gac/policy.2.4.gnome-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.config
@@ -251,6 +257,7 @@ Files included in the binary packages:
   /usr/lib/pkgconfig/rsvg-sharp-2.0.pc
 (vte)
   /usr/bin/cygvtesharpglue-2.dll
+  /usr/lib/libvtesharpglue-2.la
   /usr/lib/mono/gac/policy.2.4.vte-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.config
   /usr/lib/mono/gac/policy.2.4.vte-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.vte-sharp.dll
   /usr/lib/mono/gac/policy.2.6.vte-sharp/0.0.0.0__35e10195dab3c99f/policy.2.6.config
@@ -286,6 +293,10 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.8.3-2 -----
+Rebuilt for mono-1.2.
+vte-sharp updated for vte-0.14.
 
 ----- version 2.8.3-1 -----
 Initial release of 2.x branch for Cygwin.
