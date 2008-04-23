@@ -3,34 +3,32 @@ gtk-sharp2
 Mono CSharp bindings for the GNOME libraries.
 
 Runtime requirements:
-  cygwin-1.5.25-7
-  mono-1.2.6-1
+  cygwin-1.5.25-11
+  mono-1.9.1-1
 (glib)
   glib2-2.14.6-1
 (gtk)
   atk-1.20.0-1
-  gdk-pixbuf2-2.12.7-1
-  gtk2-x11-2.12.7-1
+  gdk-pixbuf2-2.12.9-1
+  gtk2-x11-2.12.9-1
   pango-1.18.4-1
 (glade)
   libglade2-2.6.2-1
 (gapi2)
-  perl-5.8.8-4
-  perl-XML-LibXML-1.65-1
+  perl-5.10.0-3
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.61-1
-  automake1.10-1.10-1
+  automake1.10-1.10.1-1
   binutils-20060817-1
-  cygport-0.3.8-1
+  cygport-0.3.9-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  libtool-2.2.2-2
   make-3.81-1
-  monodoc-1.2.6-1
-  perl-5.8.8-4
-  perl-XML-LibXML-1.65-1 
+  monodoc-1.9.1-1
+  perl-5.10.0-3
   pkg-config-0.21-1
   sed-4.1.5-2
 
@@ -43,41 +41,53 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gtk-sharp2-2.10.3-X-src.tar.bz2
+  unpack gtk-sharp2-2.12.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gtk-sharp2-2.10.3-X.cygport all
+  cygport ./gtk-sharp2-2.12.0-X.cygport all
 
 This will create:
-  /usr/src/gtk-sharp2-2.10.3-X-src.tar.bz2
-  /usr/src/gtk-sharp2-2.10.3-X.tar.bz2
+  /usr/src/gtk-sharp2-2.12.0-X-src.tar.bz2
+  /usr/src/gtk-sharp2-2.12.0-X.tar.bz2
 
-  /usr/src/gapi2-2.10.3-X.tar.bz2
-  /usr/src/glib-sharp2-2.10.3-X.tar.bz2
-  /usr/src/glade-sharp2-2.10.3-X.tar.bz2
+  /usr/src/gapi2-2.12.0-X.tar.bz2
+  /usr/src/glib-sharp2-2.12.0-X.tar.bz2
+  /usr/src/glade-sharp2-2.12.0-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (gtk-sharp2)
+  /usr/bin/cygatksharpglue-2.dll
   /usr/bin/cyggdksharpglue-2.dll
   /usr/bin/cyggtksharpglue-2.dll
   /usr/bin/cygpangosharpglue-2.dll
+  /usr/lib/libatksharpglue-2.la
   /usr/lib/libgdksharpglue-2.la
   /usr/lib/libgtksharpglue-2.la
   /usr/lib/libpangosharpglue-2.la
-  /usr/lib/mono/gac/atk-sharp/2.10.0.0__35e10195dab3c99f/atk-sharp.dll
-  /usr/lib/mono/gac/atk-sharp/2.10.0.0__35e10195dab3c99f/atk-sharp.dll.config
-  /usr/lib/mono/gac/gdk-sharp/2.10.0.0__35e10195dab3c99f/gdk-sharp.dll
-  /usr/lib/mono/gac/gdk-sharp/2.10.0.0__35e10195dab3c99f/gdk-sharp.dll.config
-  /usr/lib/mono/gac/gtk-dotnet/2.10.0.0__35e10195dab3c99f/gtk-dotnet.dll
-  /usr/lib/mono/gac/gtk-dotnet/2.10.0.0__35e10195dab3c99f/gtk-dotnet.dll.config
-  /usr/lib/mono/gac/gtk-sharp/2.10.0.0__35e10195dab3c99f/gtk-sharp.dll
-  /usr/lib/mono/gac/gtk-sharp/2.10.0.0__35e10195dab3c99f/gtk-sharp.dll.config
-  /usr/lib/mono/gac/pango-sharp/2.10.0.0__35e10195dab3c99f/pango-sharp.dll
-  /usr/lib/mono/gac/pango-sharp/2.10.0.0__35e10195dab3c99f/pango-sharp.dll.config
+  /usr/lib/mono/gac/atk-sharp/2.12.0.0__35e10195dab3c99f/atk-sharp.dll
+  /usr/lib/mono/gac/atk-sharp/2.12.0.0__35e10195dab3c99f/atk-sharp.dll.config
+  /usr/lib/mono/gac/gdk-sharp/2.12.0.0__35e10195dab3c99f/gdk-sharp.dll
+  /usr/lib/mono/gac/gdk-sharp/2.12.0.0__35e10195dab3c99f/gdk-sharp.dll.config
+  /usr/lib/mono/gac/gtk-dotnet/2.12.0.0__35e10195dab3c99f/gtk-dotnet.dll
+  /usr/lib/mono/gac/gtk-dotnet/2.12.0.0__35e10195dab3c99f/gtk-dotnet.dll.config
+  /usr/lib/mono/gac/gtk-sharp/2.12.0.0__35e10195dab3c99f/gtk-sharp.dll
+  /usr/lib/mono/gac/gtk-sharp/2.12.0.0__35e10195dab3c99f/gtk-sharp.dll.config
+  /usr/lib/mono/gac/pango-sharp/2.12.0.0__35e10195dab3c99f/pango-sharp.dll
+  /usr/lib/mono/gac/pango-sharp/2.12.0.0__35e10195dab3c99f/pango-sharp.dll.config
+  /usr/lib/mono/gac/policy.2.10.atk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.atk-sharp.dll
+  /usr/lib/mono/gac/policy.2.10.atk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.config
+  /usr/lib/mono/gac/policy.2.10.gdk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.config
+  /usr/lib/mono/gac/policy.2.10.gdk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.gdk-sharp.dll
+  /usr/lib/mono/gac/policy.2.10.gtk-dotnet/0.0.0.0__35e10195dab3c99f/policy.2.10.config
+  /usr/lib/mono/gac/policy.2.10.gtk-dotnet/0.0.0.0__35e10195dab3c99f/policy.2.10.gtk-dotnet.dll
+  /usr/lib/mono/gac/policy.2.10.gtk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.config
+  /usr/lib/mono/gac/policy.2.10.gtk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.gtk-sharp.dll
+  /usr/lib/mono/gac/policy.2.10.pango-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.config
+  /usr/lib/mono/gac/policy.2.10.pango-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.pango-sharp.dll
   /usr/lib/mono/gac/policy.2.4.atk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.atk-sharp.dll
   /usr/lib/mono/gac/policy.2.4.atk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.config
   /usr/lib/mono/gac/policy.2.4.gdk-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.config
@@ -113,6 +123,11 @@ Files included in the binary packages:
   /usr/lib/mono/gtk-sharp-2.0/gtk-dotnet.dll
   /usr/lib/mono/gtk-sharp-2.0/gtk-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/pango-sharp.dll
+  /usr/lib/mono/gtk-sharp-2.0/policy.2.10.atk-sharp.dll
+  /usr/lib/mono/gtk-sharp-2.0/policy.2.10.gdk-sharp.dll
+  /usr/lib/mono/gtk-sharp-2.0/policy.2.10.gtk-dotnet.dll
+  /usr/lib/mono/gtk-sharp-2.0/policy.2.10.gtk-sharp.dll
+  /usr/lib/mono/gtk-sharp-2.0/policy.2.10.pango-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.4.atk-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.4.gdk-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.4.gtk-dotnet.dll
@@ -133,21 +148,23 @@ Files included in the binary packages:
   /usr/lib/monodoc/sources/gtk-sharp-docs.zip
   /usr/lib/pkgconfig/gtk-dotnet-2.0.pc
   /usr/lib/pkgconfig/gtk-sharp-2.0.pc
-  /usr/share/doc/Cygwin/gtk-sharp2-2.10.3.README
-  /usr/share/doc/gtk-sharp2-2.10.3/AUTHORS
-  /usr/share/doc/gtk-sharp2-2.10.3/COPYING
-  /usr/share/doc/gtk-sharp2-2.10.3/ChangeLog
-  /usr/share/doc/gtk-sharp2-2.10.3/HACKING
-  /usr/share/doc/gtk-sharp2-2.10.3/INSTALL
-  /usr/share/doc/gtk-sharp2-2.10.3/NEWS
-  /usr/share/doc/gtk-sharp2-2.10.3/README
-  /usr/share/doc/gtk-sharp2-2.10.3/README.generator
+  /usr/share/doc/Cygwin/gtk-sharp2-2.12.0.README
+  /usr/share/doc/gtk-sharp2-2.12.0/AUTHORS
+  /usr/share/doc/gtk-sharp2-2.12.0/COPYING
+  /usr/share/doc/gtk-sharp2-2.12.0/ChangeLog
+  /usr/share/doc/gtk-sharp2-2.12.0/HACKING
+  /usr/share/doc/gtk-sharp2-2.12.0/INSTALL
+  /usr/share/doc/gtk-sharp2-2.12.0/NEWS
+  /usr/share/doc/gtk-sharp2-2.12.0/README
+  /usr/share/doc/gtk-sharp2-2.12.0/README.generator
 
 (glade-sharp2)
   /usr/bin/cyggladesharpglue-2.dll
   /usr/lib/libgladesharpglue-2.la
-  /usr/lib/mono/gac/glade-sharp/2.10.0.0__35e10195dab3c99f/glade-sharp.dll
-  /usr/lib/mono/gac/glade-sharp/2.10.0.0__35e10195dab3c99f/glade-sharp.dll.config
+  /usr/lib/mono/gac/glade-sharp/2.12.0.0__35e10195dab3c99f/glade-sharp.dll
+  /usr/lib/mono/gac/glade-sharp/2.12.0.0__35e10195dab3c99f/glade-sharp.dll.config
+  /usr/lib/mono/gac/policy.2.10.glade-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.config
+  /usr/lib/mono/gac/policy.2.10.glade-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.glade-sharp.dll
   /usr/lib/mono/gac/policy.2.4.glade-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.config
   /usr/lib/mono/gac/policy.2.4.glade-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.glade-sharp.dll
   /usr/lib/mono/gac/policy.2.6.glade-sharp/0.0.0.0__35e10195dab3c99f/policy.2.6.config
@@ -155,6 +172,7 @@ Files included in the binary packages:
   /usr/lib/mono/gac/policy.2.8.glade-sharp/0.0.0.0__35e10195dab3c99f/policy.2.8.config
   /usr/lib/mono/gac/policy.2.8.glade-sharp/0.0.0.0__35e10195dab3c99f/policy.2.8.glade-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/glade-sharp.dll
+  /usr/lib/mono/gtk-sharp-2.0/policy.2.10.glade-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.4.glade-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.6.glade-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.8.glade-sharp.dll
@@ -163,8 +181,10 @@ Files included in the binary packages:
 (glib-sharp2)
   /usr/bin/cygglibsharpglue-2.dll
   /usr/lib/libglibsharpglue-2.la
-  /usr/lib/mono/gac/glib-sharp/2.10.0.0__35e10195dab3c99f/glib-sharp.dll
-  /usr/lib/mono/gac/glib-sharp/2.10.0.0__35e10195dab3c99f/glib-sharp.dll.config
+  /usr/lib/mono/gac/glib-sharp/2.12.0.0__35e10195dab3c99f/glib-sharp.dll
+  /usr/lib/mono/gac/glib-sharp/2.12.0.0__35e10195dab3c99f/glib-sharp.dll.config
+  /usr/lib/mono/gac/policy.2.10.glib-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.config
+  /usr/lib/mono/gac/policy.2.10.glib-sharp/0.0.0.0__35e10195dab3c99f/policy.2.10.glib-sharp.dll
   /usr/lib/mono/gac/policy.2.4.glib-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.config
   /usr/lib/mono/gac/policy.2.4.glib-sharp/0.0.0.0__35e10195dab3c99f/policy.2.4.glib-sharp.dll
   /usr/lib/mono/gac/policy.2.6.glib-sharp/0.0.0.0__35e10195dab3c99f/policy.2.6.config
@@ -172,6 +192,7 @@ Files included in the binary packages:
   /usr/lib/mono/gac/policy.2.8.glib-sharp/0.0.0.0__35e10195dab3c99f/policy.2.8.config
   /usr/lib/mono/gac/policy.2.8.glib-sharp/0.0.0.0__35e10195dab3c99f/policy.2.8.glib-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/glib-sharp.dll
+  /usr/lib/mono/gtk-sharp-2.0/policy.2.10.glib-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.4.glib-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.6.glib-sharp.dll
   /usr/lib/mono/gtk-sharp-2.0/policy.2.8.glib-sharp.dll
@@ -196,6 +217,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.12.0-1 -----
+Version bump.
 
 ----- version 2.10.3-1 -----
 Version bump.
