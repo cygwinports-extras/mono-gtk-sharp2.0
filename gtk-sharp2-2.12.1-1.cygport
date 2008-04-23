@@ -1,0 +1,42 @@
+ORIG_PN="${PN%${PV_MAJ}}"
+my_pn=${ORIG_PN}-2.0
+
+inherit mono gnome.org
+
+DESCRIPTION="GTK C-Sharp bindings"
+
+PKG_NAMES="${PN} gapi2"
+PKG_HINTS="setup gapi"
+PKG_CONTENTS[1]="usr/bin/gapi* usr/lib/${my_pn}/gapi*
+                 usr/lib/pkgconfig/gapi-2.0.pc usr/share/gapi-2.0/"
+
+n=2
+for gspkg in glib glade
+do
+	PKG_NAMES+=" ${gspkg}-sharp2"
+	PKG_HINTS+=" ${gspkg}"
+	PKG_CONTENTS[0]+=" --exclude=*${gspkg}sharp* --exclude=*${gspkg}-sharp*"
+	PKG_CONTENTS[$((n++))]="usr/bin/cyg${gspkg}sharpglue*
+                            usr/lib/lib${gspkg}sharpglue*
+                            usr/lib/mono/gac/*${gspkg}-sharp*
+                            usr/lib/mono/${my_pn}/*${gspkg}-sharp*.dll
+                            usr/lib/pkgconfig/${gspkg}-sharp-2.0.pc"
+done
+
+PKG_CONTENTS[0]+=" --exclude=gapi* usr/"
+
+DIFF_EXCLUDES="cairo-sample.exe.config"
+
+CYGCONF_ARGS="--disable-static"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	# Mono doesn't like these stripped
+	chmod -w ${D}/usr/bin/*sharpglue*.dll
+
+	sed -i -e 's!shouldnotlink=no!shouldnotlink=yes!' ${D}/usr/lib/*.la
+
+	dodoc ${S}/README.generator
+}
