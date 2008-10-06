@@ -1,0 +1,64 @@
+--- origsrc/gtk-sharp-2.12.1/atk/glue/Makefile.am	2008-04-17 20:06:54.000000000 -0500
++++ src/gtk-sharp-2.12.1/atk/glue/Makefile.am	2008-04-22 20:43:56.265625000 -0500
+@@ -1,6 +1,6 @@
+ lib_LTLIBRARIES = libatksharpglue-2.la
+ 
+-libatksharpglue_2_la_LDFLAGS = -module -avoid-version -no-undefined
++libatksharpglue_2_la_LDFLAGS = -avoid-version -no-undefined
+ 
+ libatksharpglue_2_la_SOURCES = 	\
+ 	misc.c			\
+--- origsrc/gtk-sharp-2.12.1/gdk/glue/Makefile.am	2008-03-06 21:26:41.000000000 -0600
++++ src/gtk-sharp-2.12.1/gdk/glue/Makefile.am	2008-04-22 20:43:56.625000000 -0500
+@@ -13,7 +13,7 @@
+ # Adding a new glue file?
+ # Please remember to update makefile.win32
+ 
+-libgdksharpglue_2_la_LDFLAGS = -module -avoid-version -no-undefined
++libgdksharpglue_2_la_LDFLAGS = -avoid-version -no-undefined
+ 
+ libgdksharpglue_2_la_LIBADD = $(GTK_LIBS)
+ 
+--- origsrc/gtk-sharp-2.12.1/glade/glue/Makefile.am	2008-03-06 21:26:47.000000000 -0600
++++ src/gtk-sharp-2.12.1/glade/glue/Makefile.am	2008-04-22 20:43:56.640625000 -0500
+@@ -6,7 +6,7 @@
+ TARGET = 
+ endif
+ 
+-libgladesharpglue_2_la_LDFLAGS = -module -avoid-version -no-undefined
++libgladesharpglue_2_la_LDFLAGS = -avoid-version -no-undefined
+ 
+ libgladesharpglue_2_la_SOURCES = 	\
+ 	gladexml.c
+--- origsrc/gtk-sharp-2.12.1/glib/glue/Makefile.am	2008-03-06 21:26:49.000000000 -0600
++++ src/gtk-sharp-2.12.1/glib/glue/Makefile.am	2008-04-22 20:43:56.671875000 -0500
+@@ -1,6 +1,6 @@
+ lib_LTLIBRARIES = libglibsharpglue-2.la
+ 
+-libglibsharpglue_2_la_LDFLAGS = -module -avoid-version -no-undefined
++libglibsharpglue_2_la_LDFLAGS = -avoid-version -no-undefined
+ 
+ libglibsharpglue_2_la_SOURCES = 	\
+ 	error.c			\
+--- origsrc/gtk-sharp-2.12.1/gtk/glue/Makefile.am	2008-03-06 21:25:11.000000000 -0600
++++ src/gtk-sharp-2.12.1/gtk/glue/Makefile.am	2008-04-22 20:43:56.734375000 -0500
+@@ -20,7 +20,7 @@
+ # Adding a new glue file?
+ # Please remember to update makefile.win32
+ 
+-libgtksharpglue_2_la_LDFLAGS = -module -avoid-version -no-undefined
++libgtksharpglue_2_la_LDFLAGS = -avoid-version -no-undefined
+ 
+ libgtksharpglue_2_la_LIBADD = $(GTK_LIBS)
+ 
+--- origsrc/gtk-sharp-2.12.1/pango/glue/Makefile.am	2008-03-06 21:25:17.000000000 -0600
++++ src/gtk-sharp-2.12.1/pango/glue/Makefile.am	2008-04-22 20:43:56.765625000 -0500
+@@ -9,7 +9,7 @@
+ # Adding a new glue file?
+ # Please remember to update makefile.win32
+ 
+-libpangosharpglue_2_la_LDFLAGS = -module -avoid-version -no-undefined
++libpangosharpglue_2_la_LDFLAGS = -avoid-version -no-undefined
+ 
+ libpangosharpglue_2_la_LIBADD = $(PANGO_LIBS)
+ 

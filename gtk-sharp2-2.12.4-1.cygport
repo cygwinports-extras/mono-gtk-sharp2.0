@@ -5,6 +5,9 @@ inherit mono gnome.org
 
 DESCRIPTION="GTK C-Sharp bindings"
 
+PATCH_URI="2.12-cygwin-dll.patch
+           2.12-no-module.patch"
+
 PKG_NAMES="${PN} gapi2"
 PKG_HINTS="setup gapi"
 PKG_CONTENTS[1]="usr/bin/gapi* usr/lib/${my_pn}/gapi*

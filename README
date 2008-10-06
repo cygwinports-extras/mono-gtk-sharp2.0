@@ -3,33 +3,33 @@ gtk-sharp2
 Mono CSharp bindings for the GNOME libraries.
 
 Runtime requirements:
-  cygwin-1.5.25-11
-  mono-1.9.1-1
+  cygwin-1.5.25-15
+  mono-1.2.0-1
 (glib)
-  glib2-2.14.6-1
+  glib2-2.16.6-1
 (gtk)
-  atk-1.20.0-1
-  gdk-pixbuf2-2.12.9-1
-  gtk2-x11-2.12.9-1
-  pango-1.18.4-1
+  atk-1.22.0-1
+  gdk-pixbuf2-2.12.12-1
+  gtk2-x11-2.12.12-1
+  pango-1.20.5-1
 (glade)
-  libglade2-2.6.2-1
+  libglade2-2.6.3-1
 (gapi2)
-  perl-5.10.0-3
+  perl-5.10.0-5
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
+  autoconf2.5-2.63-1
   automake1.10-1.10.1-1
-  binutils-20060817-1
-  cygport-0.3.9-1
+  binutils-20080624-2
+  cygport-0.4.0-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool-2.2.2-2
+  libtool-2.2.6a-1
   make-3.81-1
-  monodoc-1.9.1-1
-  perl-5.10.0-3
-  pkg-config-0.21-1
+  monodoc-2.0-1
+  perl-5.10.0-5
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical website:
@@ -41,19 +41,19 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gtk-sharp2-2.12.1-X-src.tar.bz2
+  unpack gtk-sharp2-2.12.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gtk-sharp2-2.12.1-X.cygport all
+  cygport ./gtk-sharp2-2.12.4-X.cygport all
 
 This will create:
-  /usr/src/gtk-sharp2-2.12.1-X-src.tar.bz2
-  /usr/src/gtk-sharp2-2.12.1-X.tar.bz2
+  /usr/src/gtk-sharp2-2.12.4-X-src.tar.bz2
+  /usr/src/gtk-sharp2-2.12.4-X.tar.bz2
 
-  /usr/src/gapi2-2.12.1-X.tar.bz2
-  /usr/src/glib-sharp2-2.12.1-X.tar.bz2
-  /usr/src/glade-sharp2-2.12.1-X.tar.bz2
+  /usr/src/gapi2-2.12.4-X.tar.bz2
+  /usr/src/glib-sharp2-2.12.4-X.tar.bz2
+  /usr/src/glade-sharp2-2.12.4-X.tar.bz2
 
 -------------------------------------------
 
@@ -148,14 +148,14 @@ Files included in the binary packages:
   /usr/lib/monodoc/sources/gtk-sharp-docs.zip
   /usr/lib/pkgconfig/gtk-dotnet-2.0.pc
   /usr/lib/pkgconfig/gtk-sharp-2.0.pc
-  /usr/share/doc/gtk-sharp2-2.12.1/AUTHORS
-  /usr/share/doc/gtk-sharp2-2.12.1/COPYING
-  /usr/share/doc/gtk-sharp2-2.12.1/ChangeLog
-  /usr/share/doc/gtk-sharp2-2.12.1/HACKING
-  /usr/share/doc/gtk-sharp2-2.12.1/INSTALL
-  /usr/share/doc/gtk-sharp2-2.12.1/NEWS
-  /usr/share/doc/gtk-sharp2-2.12.1/README
-  /usr/share/doc/gtk-sharp2-2.12.1/README.generator
+  /usr/share/doc/gtk-sharp2-2.12.4/AUTHORS
+  /usr/share/doc/gtk-sharp2-2.12.4/COPYING
+  /usr/share/doc/gtk-sharp2-2.12.4/ChangeLog
+  /usr/share/doc/gtk-sharp2-2.12.4/HACKING
+  /usr/share/doc/gtk-sharp2-2.12.4/INSTALL
+  /usr/share/doc/gtk-sharp2-2.12.4/NEWS
+  /usr/share/doc/gtk-sharp2-2.12.4/README
+  /usr/share/doc/gtk-sharp2-2.12.4/README.generator
 
 (glade-sharp2)
   /usr/bin/cyggladesharpglue-2.dll
@@ -216,6 +216,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.12.4-1 -----
+Version bump.
 
 ----- version 2.12.1-1 -----
 Version bump.
