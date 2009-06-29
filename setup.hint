@@ -1,4 +1,4 @@
 category: Dotnet Gnome
-requires: cygwin atk gdk-pixbuf2 gtk2-x11 pango mono glib-sharp2
+requires: atk gdk-pixbuf2 gtk2-x11 pango mono glib-sharp2
 sdesc: "Mono GTK+ bindings"
 ldesc: "Mono C-Sharp GNOME library bindings"
