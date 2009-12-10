@@ -1,5 +1,5 @@
-category: Dotnet Gnome
-requires: mono glib2
+category: DotNET
+requires: libglib2.0_0 mono-mscorlib1.0 mono-System1.0
 external-source: gtk-sharp2
 sdesc: "Mono Glib bindings"
 ldesc: "Mono C-Sharp GNOME library bindings"

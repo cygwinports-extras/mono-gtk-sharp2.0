@@ -1,0 +1,49 @@
+ORIG_PN="${PN%${PV_MAJ}}"
+my_pn=${ORIG_PN}-2.0
+
+inherit mono gnome.org
+
+DESCRIPTION="GTK C-Sharp bindings"
+
+PATCH_URI="2.12.9-cygwin-dll.patch
+           2.12.9-no-module.patch"
+
+PKG_NAMES="${PN} gapi2 mono-gtk-sharp2.0 mono-gtk-dotnet2.0"
+gapi2_CONTENTS="usr/bin/gapi* usr/lib/${my_pn}/gapi* usr/lib/pkgconfig/gapi-2.0.pc"
+mono_gtk_sharp2_0_CONTENTS="usr/*/*g?ksharpglue* \
+                            usr/lib/mono/gac/*g?k-sharp/ usr/lib/mono/${my_pn}/*g?k-sharp.dll \
+                            usr/lib/monodoc/ usr/lib/pkgconfig/gtk-sharp-2.0.pc \
+                            usr/share/doc/ usr/share/gapi-2.0/g?k-api.xml"
+mono_gtk_dotnet2_0_CONTENTS="usr/lib/mono/gac/*g?k-dotnet/ usr/lib/mono/${my_pn}/*g?k-dotnet.dll \
+                             usr/lib/pkgconfig/gtk-dotnet-2.0.pc"
+
+for gspkg in glib atk pango glade
+do
+	case ${gspkg} in
+		glib|glade) mypkgcfg="usr/lib/pkgconfig/${gspkg}-sharp-2.0.pc" ;;
+		*) mypkgcfg= ;;
+	esac
+
+	PKG_NAMES+=" mono-${gspkg}-sharp2.0"
+	declare mono_${gspkg}_sharp2_0_CONTENTS="usr/*/*${gspkg}sharpglue* \
+                            usr/lib/mono/gac/*${gspkg}-sharp* \
+                            usr/lib/mono/${my_pn}/*${gspkg}-sharp*.dll \
+	                        ${mypkgcfg} \
+	                        usr/share/gapi-2.0/${gspkg}-api.xml"
+done
+
+DIFF_EXCLUDES="cairo-sample.exe.config"
+
+CYGCONF_ARGS="--disable-static"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	# Mono doesn't like these stripped
+#	chmod -w ${D}/usr/bin/*sharpglue*.dll
+
+	sed -i -e 's!shouldnotlink=no!shouldnotlink=yes!' ${D}/usr/lib/*.la
+
+	dodoc ${S}/README.generator
+}
