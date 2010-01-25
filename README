@@ -11,9 +11,7 @@ Runtime requirements:
   libglib2.0_0-2.22.2-1
   libgtk2.0_0-2.18.3-1
   libpango1.0_0-1.26.0-1
-  mono-mscorlib1.0-2.4.3-1
-  mono-System1.0-2.4.3-1
-  mono-System-Windows-Forms1.0-2.4.3-1
+  mono-2.4.3.1-1
   perl-5.10.0-5
 
 Build requirements:
@@ -26,7 +24,6 @@ Build requirements:
   gcc4-core-4.3.4-1
   libtool-2.2.7a-14
   make-3.81-2
-  monodoc-2.4.2.3-1
   perl-5.10.0-5
   pkg-config-0.23b-10
   sed-4.1.5-2

@@ -1,5 +1,5 @@
 category: DotNET
-requires: libgcc1 libglib2.0_0 libpango1.0_0 mono-Mono-Cairo1.0 mono-mscorlib1.0 mono-glib-sharp2.0
+requires: libgcc1 libglib2.0_0 libpango1.0_0 mono mono-glib-sharp2.0
 external-source: gtk-sharp2
 sdesc: "Mono Pango bindings"
 ldesc: "Mono C-Sharp GNOME library bindings"

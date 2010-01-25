@@ -1,5 +1,5 @@
 category: DotNET
-requires: libgcc1 libglade2.0_0 mono-mscorlib1.0 mono-glib-sharp2.0 mono-gtk-sharp2.0
+requires: libgcc1 libglade2.0_0 mono mono-glib-sharp2.0 mono-gtk-sharp2.0
 external-source: gtk-sharp2
 sdesc: "Mono libglade bindings"
 ldesc: "Mono C-Sharp GNOME library bindings"

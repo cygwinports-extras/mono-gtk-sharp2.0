@@ -1,5 +1,5 @@
 category: DotNET
-requires: libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 mono-mscorlib1.0 mono-Mono-Cairo1.0 mono-atk-sharp2.0 mono-glib-sharp2.0 mono-pango-sharp2.0
+requires: libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 mono mono-atk-sharp2.0 mono-glib-sharp2.0 mono-pango-sharp2.0
 external-source: gtk-sharp2
 sdesc: "Mono GTK+ bindings"
 ldesc: "Mono C-Sharp GNOME library bindings"
