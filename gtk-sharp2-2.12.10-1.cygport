@@ -5,7 +5,7 @@ inherit mono gnome.org
 
 DESCRIPTION="GTK C-Sharp bindings"
 
-PATCH_URI="2.12.9-cygwin-dll.patch
+PATCH_URI="2.12.10-cygwin-dll.patch
            2.12.9-no-module.patch"
 
 PKG_NAMES="${PN} gapi2 mono-gtk-sharp2.0 mono-gtk-dotnet2.0"
