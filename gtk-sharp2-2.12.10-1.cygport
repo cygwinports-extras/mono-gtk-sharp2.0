@@ -5,8 +5,7 @@ inherit mono gnome.org
 
 DESCRIPTION="GTK C-Sharp bindings"
 
-PATCH_URI="2.12.10-cygwin-dll.patch
-           2.12.9-no-module.patch"
+PATCH_URI="2.12.10-cygwin-dll.patch"
 
 PKG_NAMES="${PN} gapi2 mono-gtk-sharp2.0 mono-gtk-dotnet2.0"
 gapi2_CONTENTS="usr/bin/gapi* usr/lib/${my_pn}/gapi* usr/lib/pkgconfig/gapi-2.0.pc"
@@ -36,14 +35,4 @@ DIFF_EXCLUDES="cairo-sample.exe.config"
 
 CYGCONF_ARGS="--disable-static"
 
-src_install() {
-	cd ${B}
-	cyginstall
-
-	# Mono doesn't like these stripped
-#	chmod -w ${D}/usr/bin/*sharpglue*.dll
-
-	sed -i -e 's!shouldnotlink=no!shouldnotlink=yes!' ${D}/usr/lib/*.la
-
-	dodoc ${S}/README.generator
-}
+DOCS="README.generator"
