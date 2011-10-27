@@ -53,7 +53,7 @@
 -fi
 +	;;
 +esac
- SDCHECK="`$GACUTIL /l |grep ^System.Drawing, | head -n1 |cut -f1 -d','`"
+ SDCHECK="`$GACUTIL -l |grep ^System.Drawing, | head -n1 |cut -f1 -d','`"
  if test "x$SDCHECK" = "xSystem.Drawing"; then
  	enable_dotnet=yes
 @@ -175,6 +185,7 @@ AC_SUBST(CSC)

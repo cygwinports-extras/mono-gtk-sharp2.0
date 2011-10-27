@@ -1,13 +1,13 @@
-ORIG_PN="${PN%${PV_MAJ}}"
+ORIG_PN="gtk-sharp"
 my_pn=${ORIG_PN}-2.0
 
-inherit mono gnome.org
+inherit mono
 
 DESCRIPTION="GTK C-Sharp bindings"
-
+SRC_URI="http://download.mono-project.com/sources/gtk-sharp212/${ORIG_PN}-${PV}.tar.bz2"
 PATCH_URI="2.12.10-cygwin-dll.patch"
 
-PKG_NAMES="${PN} gapi2 mono-gtk-sharp2.0 mono-gtk-dotnet2.0"
+PKG_NAMES="${PN} gapi2 mono-gtk-dotnet2.0"
 gapi2_CONTENTS="usr/bin/gapi* usr/lib/${my_pn}/gapi* usr/lib/pkgconfig/gapi-2.0.pc"
 mono_gtk_sharp2_0_CONTENTS="usr/*/*g?ksharpglue* \
                             usr/lib/mono/gac/*g?k-sharp/ usr/lib/mono/${my_pn}/*g?k-sharp.dll \
